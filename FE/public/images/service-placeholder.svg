@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">No service image</title>
+  <desc id="desc">A neutral placeholder image for travel services without photos.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fafc"/>
+      <stop offset="1" stop-color="#e2e8f0"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#f59e0b"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)"/>
+  <circle cx="908" cy="202" r="76" fill="url(#sun)" opacity=".9"/>
+  <path d="M0 558c118-79 235-118 352-118 190 0 274 104 431 104 151 0 250-74 417-90v346H0z" fill="#cbd5e1"/>
+  <path d="M0 628c123-72 248-108 375-108 175 0 264 86 424 86 152 0 263-60 401-72v266H0z" fill="#94a3b8"/>
+  <path d="M0 690c150-52 295-78 435-78 149 0 268 49 407 49 129 0 245-34 358-44v183H0z" fill="#64748b"/>
+  <g fill="none" stroke="#475569" stroke-linecap="round" stroke-linejoin="round" stroke-width="22" opacity=".72">
+    <path d="M445 355h310"/>
+    <path d="m600 253 155 102-155 102-155-102z"/>
+    <path d="M600 253v204"/>
+    <path d="M445 355l155 102"/>
+    <path d="M755 355 600 457"/>
+  </g>
+  <text x="600" y="548" fill="#475569" font-family="Arial, Helvetica, sans-serif" font-size="46" font-weight="700" text-anchor="middle">Chua co hinh anh</text>
+</svg>
