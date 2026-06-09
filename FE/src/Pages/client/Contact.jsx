@@ -7,6 +7,9 @@ import {
 } from "react-icons/fa";
 import RequiredLabel from "../../Components/shared/RequiredLabel.jsx";
 
+const contactHeroImage =
+  "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1800&q=85";
+
 const infomationContact = [
   {
     main: "Địa chỉ",
@@ -55,8 +58,14 @@ const Contact = () => {
   return (
     <div>
       {/* HEADER */}
-      <section className="h-[400px] bg-gradient-to-r from-[#1a1a2e] to-[#16213e] flex items-center justify-center text-center">
-        <div className="max-w-3xl mx-auto px-4">
+      <section className="relative flex h-[400px] items-center justify-center overflow-hidden text-center">
+        <img
+          src={contactHeroImage}
+          alt="Liên hệ ViVu Travel"
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#1a1a2e]/70" />
+        <div className="relative z-10 max-w-3xl mx-auto px-4">
           <h1 className="text-white font-serif text-[clamp(30px,5vw,48px)] font-bold">
             Liên <span className="text-[#f97316]">Hệ</span>
           </h1>

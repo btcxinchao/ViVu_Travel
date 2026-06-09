@@ -18,7 +18,7 @@ function App() {
               primary: "#22c55e",
               secondary: "#ffffff",
             },
-          },
+          },  
           error: {
             iconTheme: {
               primary: "#ef4444",
