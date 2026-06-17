@@ -503,11 +503,11 @@ const Destination = () => {
                 <button
                   type="button"
                   onClick={handleSearch}
-                  className="flex h-[60px] w-full items-center justify-center whitespace-nowrap rounded-xl rounded bg-gradient-to-r from-[#F78F10] to-[#F78F10] px-5 text-white transition-all hover:shadow-lg hover:shadow-orange-200 lg:min-w-[140px] lg:w-auto"
+                  className="flex h-[60px] w-full items-center justify-center whitespace-nowrap rounded-xl bg-[#F78F10] px-5 text-white transition-all lg:min-w-[140px] lg:w-auto"
                 >
                   <div className="flex items-center gap-2">
                     <CiSearch className="text-lg font-bold" />
-                    <p className="rounded-xl bg-gradient-to-r from-[#F78F10] to-[#F78F10] px-6 py-3.5 text-white transition-all hover:shadow-lg hover:shadow-orange-200">
+                    <p className="rounded-xl bg-[#F78F10] px-6 py-3.5 text-white">
                       Tìm kiếm
                     </p>
                   </div>

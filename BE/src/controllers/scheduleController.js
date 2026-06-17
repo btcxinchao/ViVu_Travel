@@ -94,15 +94,24 @@ module.exports.getSchedulesByService = async (req, res) => {
       req.user?.role === "provider" &&
       String(service.provider_id) === String(req.user.id);
 
-    const query = canManageSchedules
-      ? { serviceId }
-      : {
-          serviceId,
-          status: "open",
-          departureDate: { $gte: new Date() },
-        };
+    if (canManageSchedules) {
+      const schedules = await Schedule.find({ serviceId }).sort({ departureDate: 1 });
+      return res.status(200).json({ data: schedules });
+    }
 
-    const schedules = await Schedule.find(query).sort({ departureDate: 1 });
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const upcomingSchedules = await Schedule.find({
+      serviceId,
+      status: "open",
+      departureDate: { $gte: today },
+    }).sort({ departureDate: 1 });
+
+    const schedules =
+      upcomingSchedules.length > 0
+        ? upcomingSchedules
+        : await Schedule.find({ serviceId, status: "open" }).sort({ departureDate: 1 });
 
     return res.status(200).json({ data: schedules });
   } catch (error) {

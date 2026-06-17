@@ -33,7 +33,7 @@ function SignIn() {
   }
 
   const inputClass =
-    "w-full rounded-xl border bg-gray-50 px-4 py-3 text-sm outline-none focus:border-orange-400";
+    "w-full rounded-xl border border-stone-200 bg-stone-50 px-4 py-3 text-sm text-slate-700 outline-none shadow-sm transition focus:border-orange-300 focus:bg-white focus:ring-2 focus:ring-orange-100";
   const errorInputClass =
     "border-rose-500 text-rose-600 focus:border-rose-500 focus:ring-2 focus:ring-rose-100";
   const getInputClass = (field) =>
@@ -104,9 +104,9 @@ function SignIn() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-orange-50 to-white px-4">
+    <div className="flex min-h-screen items-center justify-center bg-[linear-gradient(135deg,#fffaf5_0%,#fff7ed_45%,#f8fafc_100%)] px-4">
       <div className="w-full max-w-md">
-        <div className="rounded-3xl border border-gray-100 bg-white p-8 shadow-xl">
+        <div className="rounded-3xl border border-stone-200 bg-white/95 p-8 shadow-[0_18px_45px_-18px_rgba(120,113,108,0.35)]">
           <div className="mb-6 text-center">
             <h1 className="mb-2 text-3xl font-bold text-gray-800">Đăng nhập</h1>
             <p className="mb-3 mt-1 text-sm text-gray-500">
@@ -182,7 +182,7 @@ function SignIn() {
             <button
               type="submit"
               disabled={loading}
-              className="flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#f97316] to-[#f59e0b] py-3 text-white transition hover:shadow-lg disabled:opacity-70"
+              className="flex w-full items-center justify-center gap-2 rounded-xl bg-linear-to-r from-[#f97316] to-[#f59e0b] py-3 text-white transition hover:shadow-lg disabled:opacity-70"
             >
               <CiLogin />
               {loading ? "Đang đăng nhập..." : "Đăng nhập"}

@@ -438,9 +438,9 @@ export default function Register({
   ];
 
   const inputClass =
-    "flex h-12 w-full items-center rounded-xl border border-gray-200 bg-[#f8fafc] px-4 text-[#0f172a] outline-none transition-colors focus:border-[#f97316] focus:bg-white";
+    "flex h-12 w-full items-center rounded-xl border border-orange-100 bg-white px-4 text-[#0f172a] shadow-sm outline-none transition-all duration-200 placeholder:text-slate-400 focus:border-[#fb923c] focus:bg-orange-50/60 focus:ring-2 focus:ring-orange-100";
   const uploadClass =
-    "flex h-12 w-full cursor-pointer items-center justify-between rounded-xl border border-dashed border-orange-200 bg-[#f8fafc] px-4 text-sm text-slate-600 outline-none transition hover:border-orange-300 focus:border-[#f97316] focus:bg-white";
+    "flex h-12 w-full cursor-pointer items-center justify-between rounded-xl border border-dashed border-orange-200 bg-orange-50/70 px-4 text-sm text-slate-600 shadow-sm outline-none transition-all duration-200 hover:border-orange-300 hover:bg-orange-50 focus:border-[#fb923c] focus:bg-white";
   const getInputClass = (field) =>
     fieldErrors[field]
       ? `${inputClass} border-rose-500 text-rose-600 focus:border-rose-500 focus:ring-2 focus:ring-rose-100`
@@ -457,7 +457,7 @@ export default function Register({
     ) : null;
 
   return (
-    <div className="flex min-h-[80vh] items-center justify-center bg-[#f8fafc] px-4 py-16">
+    <div className="flex min-h-[80vh] items-center justify-center bg-[linear-gradient(135deg,#fff7ed_0%,#fffbeb_45%,#fffaf0_100%)] px-4 py-16">
       <div className="w-full max-w-md">
         <div className="mb-8 mt-8 text-center">
           <h1
@@ -480,10 +480,10 @@ export default function Register({
         <form
           noValidate
           onSubmit={handleSubmit}
-          className="space-y-4 rounded-3xl border border-gray-100 bg-white p-8 shadow-xl"
+          className="space-y-4 rounded-3xl border border-orange-100 bg-white/95 p-8 shadow-[0_18px_45px_-18px_rgba(249,115,22,0.35)]"
         >
           {!lockRole ? (
-          <div className="flex gap-2 rounded-2xl bg-[#f8fafc] p-2">
+          <div className="flex gap-2 rounded-2xl bg-linear-to-r from-orange-50 to-amber-50 p-2">
             {[
               { value: "user", label: "Khách hàng" },
               { value: "provider", label: "Đối tác / Nhà cung cấp" },
@@ -493,8 +493,8 @@ export default function Register({
                 type="button"
                 onClick={() => setField("role", role.value)}
                 className={`flex-1 rounded-2xl py-2.5 transition-all ${form.role === role.value
-                    ? "bg-[#f97316] text-white shadow-sm"
-                    : "text-slate-500"
+                    ? "bg-linear-to-r from-[#fb923c] to-[#f59e0b] text-white shadow-sm"
+                    : "text-slate-500 hover:bg-white/80"
                   }`}
                 style={{ fontSize: 13, fontWeight: 600 }}
               >
@@ -555,7 +555,7 @@ export default function Register({
                   ref={fieldRefs.taxCode}
                   value={form.taxCode}
                   onChange={(e) => setField("taxCode", e.target.value)}
-                  className={getInputClass("taxCode")}
+                  className={getInputClass( "taxCode")}
                   style={{ fontSize: 14 }}
                 />
                 <FieldError name="taxCode" />
@@ -779,7 +779,7 @@ export default function Register({
           <button
             type="submit"
             disabled={loading}
-            className="flex w-full items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[#f97316] to-[#f59e0b] py-3.5 text-white transition-all hover:shadow-lg hover:shadow-orange-200 disabled:cursor-not-allowed disabled:opacity-70"
+            className="flex w-full items-center justify-center gap-2 rounded-2xl bg-linear-to-r from-[#fb923c] via-[#f59e0b] to-[#fbbf24] py-3.5 text-white shadow-md transition-all hover:shadow-lg hover:shadow-orange-200 disabled:cursor-not-allowed disabled:opacity-70"
             style={{ fontSize: 15, fontWeight: 600 }}
           >
             <CiLogin size={20} />
